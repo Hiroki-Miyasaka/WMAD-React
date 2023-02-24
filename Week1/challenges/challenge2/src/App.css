@@ -1,0 +1,114 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #23252C;
+}
+
+.mainApp {
+  max-width: 317px;
+  margin: auto;
+  margin-top: 44px;
+}
+
+.container {
+  max-width: 247px;
+}
+
+.flex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* header */
+
+header {
+  max-width: 317px;
+  max-height: 317px;
+}
+
+/* main */
+
+main {
+  background-color: #1A1B21;
+  padding-top: 21px;
+  padding-bottom: 50px;
+}
+
+.person-info > h1 {
+  max-width: 180px;
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 30px;
+  color: #FFFFFF;
+}
+
+.person-info > h4 {
+  margin-top: 6px;
+  font-weight: 400;
+  font-size: 12.8px;
+  line-height: 15px;
+  color: #F3BF99;
+}
+
+.person-info > p {
+  margin-top: 8px;
+  font-weight: 400;
+  font-size: 10.24px;
+  line-height: 150%;
+  color: #F5F5F5;
+}
+
+.email-area {
+  margin-top: 16px;
+}
+
+.email-area > button {
+  padding: 5px 80px;
+  flex-direction: row;
+  gap: 9px;
+  background: #FFFFFF;
+  border: 1px solid #D1D5DB;
+  border-radius: 6px;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.person-detail {
+  margin-top: 32px;
+}
+
+.person-detail-item {
+  padding-block: 10px;
+}
+
+.person-detail-item > h2 {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 150%;
+  color: #F5F5F5;
+}
+
+.person-detail-item > p {
+  font-weight: 400;
+  font-size: 10.24px;
+  line-height: 150%;
+  color: #DCDCDC;
+}
+
+/* footer */
+
+footer {
+  background: #161619;
+  border-radius: 0px 0px 10px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 24px;
+  padding: 20px 0;
+}
