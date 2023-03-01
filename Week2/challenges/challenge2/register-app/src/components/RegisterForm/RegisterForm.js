@@ -15,7 +15,8 @@ const RegisterForm = () => {
     //fullName
     const handleFullNameError = () => {
         if(!fullName) setFullNameError("FullName is required");
-        setFullNameError("");
+        else setFullNameError("");
+        console.log(fullName);
     }
 
     const handleFullNameChange = (e) => {
@@ -59,7 +60,7 @@ const RegisterForm = () => {
 
     const handleConfirmPasswordError = () => {
         if(!confirmPassword) setConfirmPasswordError("Confirm password id required");
-        else if(validateConfirmPassword) setConfirmPasswordError("");
+        else if(validateConfirmPassword(confirmPassword)) setConfirmPasswordError("");
     }
 
     const handleConfirmPasswordChange = (e) => {
@@ -70,25 +71,52 @@ const RegisterForm = () => {
 
     return (
         <form>
-            <div>
-                <label for="fullName">FullName</label>
-                <input type="text" id="fullName" value={fullName} required/>
+            <div className="form-field">
+                <label htmlFor="fullName">FullName</label>
+                <input 
+                type="text" 
+                id="fullName" 
+                value={fullName} 
+                onChange={handleFullNameChange}
+                onBlur={handleFullNameError}
+                required/>
                 <span>{fullNameError}</span>
             </div>
-            <div>
-                <label for="email">Email</label>
-                <input type="email" id="email" value={email} required/>
+            <div className="form-field">
+                <label htmlFor="email">Email</label>
+                <input 
+                type="email" 
+                id="email" 
+                value={email} 
+                onChange={handleEmailChange}
+                onBlur={handleEmailError}
+                required/>
                 <span>{emailError}</span>
             </div>
-            <div>
-                <label for="password">Password</label>
-                <input type="password" id="password" value={password} required/>
+            <div className="form-field">
+                <label htmlFor="password">Password</label>
+                <input 
+                type="password" 
+                id="password" 
+                value={password} 
+                onChange={handlePasswordChange}
+                onBlur={handlePasswordError}
+                required/>
                 <span>{passwordError}</span>
             </div>
-            <div>
-                <label for="confirm-password">ConfirmPassword</label>
-                <input type="password" id="confirm-password" value={confirmPassword} required/>
+            <div className="form-field">
+                <label htmlFor="confirm-password">ConfirmPassword</label>
+                <input 
+                type="password" 
+                id="confirm-password" 
+                value={confirmPassword} 
+                onChange={handleConfirmPasswordChange}
+                onBlur={handleConfirmPasswordError}
+                required/>
                 <span>{confirmPasswordError}</span>
+            </div>
+            <div className="form-field">
+                <button type="submit">Register</button>
             </div>
         </form>
     );
