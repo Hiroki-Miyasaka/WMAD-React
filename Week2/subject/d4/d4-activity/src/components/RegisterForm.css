@@ -1,0 +1,35 @@
+.form-container{
+    padding: 20px 48px;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+label{
+    margin-bottom: 12px;
+}
+
+.form--input{
+    height: 32px;
+    border: 1px solid #dedede;
+    margin-bottom: 12px;
+
+    padding: 0 12px;
+    border-radius: 4px;
+}
+
+.form--marketing{
+    margin-bottom: 12px;
+}
+
+.form--submit{
+    height: 36px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+
+    border-radius: 4px;
+}

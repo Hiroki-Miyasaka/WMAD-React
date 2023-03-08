@@ -1,0 +1,35 @@
+@import "../stylesheets/variables";
+
+.main{
+    padding: 56px 26px;
+    // background-image: url("~/image/bg-image.png");
+    
+    flex: 1 1 auto;
+    background-color: $light_color;
+    color: $dark_color;
+
+    &--title{
+        margin: 0;
+        font-size: 40px;
+        letter-spacing: -0.05em;
+    }
+    &--list{
+        margin-top: 48px;
+        max-width: 400px;
+
+        &--li{
+            line-height: 20px;
+            padding-block: 10px;
+
+            &::marker{
+                font-size: 1.4rem;
+                color: #00ABCA;
+            }
+        }
+    }
+}
+
+main.dark{
+    background-color: $dark_color;
+    color: $light_color;
+}

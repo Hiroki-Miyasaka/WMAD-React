@@ -1,0 +1,83 @@
+@import "../../stylesheet/variables";
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Karla", sans-serif;
+    margin: 0;
+}
+
+main {
+    padding: 36px;
+}
+
+.form{
+    display: grid;
+    grid-template: 40px 40px / 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 16px;
+
+    &--input{
+        border-radius: $border_radius;
+        border: 1px solid $border_color;
+        text-indent: 12px;
+        outline: none;
+    }
+
+    &--button{
+        grid-column: 1 / -1;
+        border-radius: $border_radius;
+        background: $button_bg_color;
+        color: $text_color;
+        border: none;
+        cursor: pointer;
+
+        &:hover{
+            opacity: 0.9;
+        }
+    }
+}
+
+.meme{
+    position: relative;
+
+    &--image{
+        min-width: 100%;
+        max-width: 100%;
+        border-radius: $border_radius;
+    }
+
+    &--text{
+        position: absolute;
+        width: 80%;
+        text-align: center;
+        left: 50%;
+        transform: translateX(-50%);
+        margin: 16px 0;
+        padding: 0 6px;
+        font-family: Impact, sans-serif;
+        font-size: 2em;
+        text-transform: uppercase;
+        color: $text_color;
+        letter-spacing: 1.2px;
+        text-shadow: 
+            2px 2px 0 #000,
+            -2px -2px 0 #000,
+            2px -2px 0 #000,
+            -2px 2px 0 #000,
+            0 2px 0 #000,
+            2px 0 0 #000,
+            0 -2px 0 #000,
+            -2px 0 0 #000,
+            2px 2px 5px #000;
+    }
+    .bottom{
+        bottom: 0;
+    }
+    .top{
+        top: 0;
+    }
+
+}

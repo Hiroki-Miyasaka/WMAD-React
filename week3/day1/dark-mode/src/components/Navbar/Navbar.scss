@@ -1,0 +1,78 @@
+@import "../stylesheets/variables";
+
+nav{
+    display: flex;
+    align-items: center;
+    padding: 30px 25px;
+    height: 60px;
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+    z-index: 1;
+    background-color: $light_color;
+    .logo--icon{
+        width: 30px;
+        margin-right: 12px;
+    }
+    .logo--text{
+        color: #00ABCA;
+        margin-right: auto;
+    }
+    .toggler{
+        display: flex;
+        align-items: center;
+        p{
+            font-size: 0.7rem;
+            font-weight: 600;
+        }
+    
+        &--slider{
+            width: 26px;
+            height: 14px;
+            background-color: $dark_color;
+    
+            border-radius: 2rem;
+            margin-inline: 8px;
+            cursor: pointer;
+    
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            border: 1px solid black;
+            box-sizing: content-box;
+    
+            &--circle{
+                height: 14px;
+                width: 14px;
+                background-color: $light_color;
+                border-radius: 50%;
+            }
+        }
+
+        &--light{
+            color: $dark_color;
+        }
+        &--dark{
+            color: #D5D4D8;
+        }
+    }
+}
+
+nav.dark {
+    background-color: $dark_color;
+        .toggler{
+            &--slider{
+                border-color: white;
+                background-color: #F5F5F5;
+                justify-content: flex-end;
+                &--circle{
+                    background-color: black;
+                }
+            }
+            &--light{
+                color: #918E9B;
+            }
+            &--dark{
+                color: #FFFF;
+                // color: #D5D4D8;
+            }
+        }
+}
